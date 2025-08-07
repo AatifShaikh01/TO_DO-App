@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASKY - Your Personal Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+        <h1 class="splash-title">TASKY</h1>
+        <p class="splash-subtitle">Your Personal Task Manager</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Powered By Codrenix</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">TASKY</a>
+        <div class="nav-links">
+            <a href="#" data-page="all" class="active">All Tasks</a>
+            <a href="#" data-page="school">School Tasks</a>
+            <a href="#" data-page="college">College Tasks</a>
+            <a href="#" data-page="office">Office Tasks</a>
+            <a href="#" data-page="gym">Gym Tasks</a>
+            <a href="#" data-page="fortune">Fortune Tasks</a>
+            <button class="theme-toggle">🌓</button>
+        </div>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#" data-page="all" class="active">All Tasks</a>
+        <a href="#" data-page="school">School Tasks</a>
+        <a href="#" data-page="college">College Tasks</a>
+        <a href="#" data-page="office">Office Tasks</a>
+        <a href="#" data-page="gym">Gym Tasks</a>
+        <a href="#" data-page="fortune">Fortune Tasks</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="task-header">
+            <h2 class="page-title">All Tasks</h2>
+            <button class="task-btn btn-new-task">New Task</button>
+        </div>
+        <div class="task-grid" id="taskContainer"></div>
+    </main>
+
+    <!-- Edit Task Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h3>Edit Task</h3>
+            <form id="editTaskForm">
+                <label for="editTitle">Title:</label>
+                <input type="text" id="editTitle" required>
+                <label for="editDescription">Description:</label>
+                <textarea id="editDescription" required></textarea>
+                <label for="editDueDate">Due Date/Time:</label>
+                <input type="datetime-local" id="editDueDate" required>
+                <label for="editStatus">Status:</label>
+                <select id="editStatus">
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <input type="hidden" id="editTaskId">
+                <input type="hidden" id="editTaskType">
+                <div class="modal-actions">
+                    <button type="submit" class="task-btn btn-save">Save</button>
+                    <button type="button" class="task-btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Task Modal -->
+    <div class="modal" id="newTaskModal">
+        <div class="modal-content">
+            <h3>New Task</h3>
+            <form id="newTaskForm">
+                <label for="newTitle">Title:</label>
+                <input type="text" id="newTitle" required>
+                <label for="newDescription">Description:</label>
+                <textarea id="newDescription" required></textarea>
+                <label for="newDueDate">Due Date/Time:</label>
+                <input type="datetime-local" id="newDueDate" required>
+                <label for="newType">Category:</label>
+                <select id="newType" required>
+                    <option value="school">School</option>
+                    <option value="college">College</option>
+                    <option value="office">Office</option>
+                    <option value="gym">Gym</option>
+                    <option value="fortune">Fortune</option>
+                </select>
+                <div class="modal-actions">
+                    <button type="submit" class="task-btn btn-save">Save</button>
+                    <button type="button" class="task-btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 TASKY - Your Personal Task Manager. All rights reserved By CODRENIX</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
